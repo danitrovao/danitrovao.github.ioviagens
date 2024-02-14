@@ -1,0 +1,35 @@
+a,h3{
+    text-decoration: none;
+    color: inherit;
+}
+
+main section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+main article {
+    flex-basis: calc(33.33% - 20px); /* Defina a base flexível para cada artigo, considerando uma margem de 20px entre os artigos */
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px; /* Adicione uma margem na parte inferior de cada artigo para espaçamento */
+}
+
+main article img {
+    max-width: 100%; /* Garanta que a largura da imagem não ultrapasse a largura do artigo */
+    height: auto; /* Mantenha a proporção da imagem ao ajustar a largura */
+}
+
+@media (max-width: 800px) {
+    main article {
+        flex-basis: calc(100% - 30px); /* Altere a base flexível para ocupar 100% da largura da tela, menos a margem */
+    }
+}
+
+@media (max-width: 600px) {
+    main article {
+        flex-basis: calc(100% - 20px); /* Altere a base flexível para ocupar 100% da largura da tela, menos a margem */
+    }
+}
